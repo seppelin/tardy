@@ -1,7 +1,15 @@
 const std = @import("std");
 const builtin = @import("builtin");
 
+<<<<<<< HEAD
 const zig_version = std.SemanticVersion{ .major = 0, .minor = 13, .patch = 0 };
+=======
+const zig_version = std.SemanticVersion{
+    .major = 0,
+    .minor = 14,
+    .patch = 0,
+};
+>>>>>>> 23b99cc (Updated to use zig 0.14.0)
 
 comptime {
     // Compare versions while allowing different pre/patch metadata.

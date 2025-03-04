@@ -62,10 +62,17 @@ pub fn auto_async_match() AsyncType {
 
             return AsyncType.epoll;
         },
+<<<<<<< HEAD
         .windows => return AsyncType.poll,
         .ios, .macos, .watchos, .tvos, .visionos => return AsyncType.kqueue,
         .kfreebsd, .freebsd, .openbsd, .netbsd, .dragonfly => return AsyncType.kqueue,
         .solaris, .illumos => return AsyncType.poll,
+=======
+        .windows => return AsyncIOType.poll,
+        .ios, .macos, .watchos, .tvos, .visionos => return AsyncIOType.kqueue,
+        .freebsd, .openbsd, .netbsd, .dragonfly => return AsyncIOType.kqueue,
+        .solaris, .illumos => return AsyncIOType.poll,
+>>>>>>> 23b99cc (Updated to use zig 0.14.0)
         else => @compileError("Unsupported platform! Provide a custom Async I/O backend."),
     }
 }

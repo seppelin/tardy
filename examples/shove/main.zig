@@ -13,7 +13,7 @@ const OpenFileResult = @import("tardy").OpenFileResult;
 const ReadResult = @import("tardy").ReadResult;
 const WriteResult = @import("tardy").WriteResult;
 
-pub const std_options = .{
+pub const std_options = std.Options{
     .log_level = .debug,
 };
 
